@@ -2,7 +2,7 @@
 {
     public class Mocker
     {
-        public static IEnumerable<Person> GetAllPersons()
+        public static IQueryable<Person> GetAllPersons()
         {
             Random random = new Random();
             var positions = new List<string> { "Developer", "Manager", "Tester" };
@@ -36,7 +36,7 @@
                 });
             }
 
-            return people;
+            return people.AsQueryable();
         }
     }
 }

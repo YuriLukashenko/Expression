@@ -6,7 +6,7 @@ var msDevs = expressions.GetAllPersons("Microsoft Developer").ToList();
 var appleTesters = expressions.GetAllPersons("Tester Apple ").ToList();
 
 Console.WriteLine($"Microsoft developers count: {msDevs.Count}");
-msDevs.ForEach(x => x.PrintProperties());
-
 Console.WriteLine($"Apple testers count: {appleTesters.Count}");
+
+msDevs.ForEach(x => x.PrintProperties());
 appleTesters.ForEach(x => x.PrintProperties());
